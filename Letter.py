@@ -1,6 +1,7 @@
 import string
 import random
 import time
+from mainandersrum.py import ausgabe
 
 status = False
 
@@ -10,6 +11,8 @@ print(zufall)
 
 start = time.time()
 
+if ausgabe == zufall:
+    status = True
 
 if status == True:
     print("Richtig!")

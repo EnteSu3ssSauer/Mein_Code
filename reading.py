@@ -1,6 +1,10 @@
 from gpiozero import Button
 from time import time, sleep
 
+Zeichen = ""
+
+# Dit = 0.06 < time < 0.08
+# Dah = 0.20 < time < 0.22
 # Button connected between GPIO 17 and GND
 
 def button_tracker():
@@ -35,3 +39,7 @@ def button_tracker():
     print("Waiting for button activity...")
     while True:
         sleep(0.1)
+        if 0.06 < pressed_time < 0.08:
+            Zeichen += "."
+        elif 0.20 < pressed_time < 0.22:
+            Zeichen += "_"
